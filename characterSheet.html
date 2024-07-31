@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <title>DND Free Create User Account</title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <style>
+   fieldset {
+     background-color: #eeeeee;
+   }
+
+   legend {
+     background-color: gray;
+     color: white;
+     padding: 5px 10px;
+   }
+
+   input {
+     margin: 5px;
+   }
+   .form label{
+     display: block;
+     text-align: center;
+     float: center;
+  }
+  .row {
+     margin-left:-5px;
+     margin-right:-5px;
+  }
+  .column {
+     float: left;
+     width: 50%;
+     padding: 5px;
+  }
+  </style>
+  <body>
+      <legend>Character Sheet</legend>
+      <table>
+      <form id="form-info" action="characterInfo" method="post">
+	<tbody>
+          <tr>
+		  <td><label for="name">Character Name</label></td>
+		  <td><input type="text" name="name" required /></td>
+		  <td><label for="class">Class</label></td>
+		  <td><input type="text" name="class" required /></td>
+		  <td><label for="race">Race</label></td>
+		  <td><input type="text" name="race" required /></td>
+		  <td><label for="height">Height</label></td>
+		  <td><input type="text" name="height" required /></td>
+		  <td><label for="weight">Weight</label></td>
+		  <td><input type="text" name="weight" required /></td>
+		  <td><label for="hair">Hair</label></td>
+		  <td><input type="text" name="height" required /></td>
+		  <td><label for="eyes">Eyes</label></td>
+		  <td><input type="text" name="eyes" required /></td>
+	  </tr>
+	</tbody>
+      </form>
+      </table>
+      <table>
+      <form id="form-charStats" action="characterStats" method="post">
+        <tbody>
+	  <tr>
+		  <td><label for="level">Level</label></td>
+		  <td><input type="text" name="level" required /></td>
+		  <td><label for="proficiencyBonus">Proficiency Bonus</label></td>
+		  <td><input type="text" name="proficiencyBonus" required /></td>
+		  <td><label for="walkingSpeed">Walking Speed</label></td>
+		  <td><input type="text" name="walkingSpeed" required /></td>
+		  <td><label for="initiative">Initiative</label></td>
+		  <td><input type="text" name="initiative" required /></td>
+		  <td><label for="armorClass">Armor Class</label></td>
+		  <td><input type="text" name="armorClass" required /></td>
+	  </tr>
+	</tbody>
+      </form>
+      </table>
+      <div class="row">
+	<div class="column">
+          <table>
+          <form id="form-rolls" action="characterRolls" method="post">
+	    <tbody>
+	      <tr>
+		  <td><label for="spacing" /></td>
+		  <td><label for="column1" />Roll</td>
+	      </tr>
+	      <tr>
+		  <td><label for="Strength">Strength</label></td>
+		  <td><input type="text" name="strengthRoll" required /></td>
+	      </tr>
+	      <tr>
+		  <td><label for="Dexterity">Dexterity</label></td>
+		  <td><input type="text" name="dexterityRoll" required /></td>
+	      </tr>
+	      <tr>
+		  <td><label for="Constitution">Constitution</label></td>
+		  <td><input type="text" name="constitutionRoll" required /></td>
+	      </tr>
+	      <tr>
+		  <td><label for="Intelligence">Intelligence</label></td>
+		  <td><input type="text" name="intelligenceRoll" required /></td>
+	      </tr>
+	      <tr>
+		  <td><label for="Wisdom">Wisdom</label></td>
+		  <td><input type="text" name="wisdomRoll" required /></td>
+	      </tr>
+	      <tr>
+		  <td><label for="Charisma">Charisma</label></td>
+		  <td><input type="text" name="charismaRoll" required /></td>
+	      </tr>
+	    </tbody>
+          </form>
+          </table>
+	</div>
+	<div class="column">
+          <table>
+          <form id="form-rollmods" action="rollModifiers" method="post">
+	    <tbody>
+	      <tr>
+		  <td><label for="column2" />Modifier</td>
+	      </tr>
+	      <tr>
+		  <td><input type="text" name="strengthBonus" /></td>
+	      </tr>
+	      <tr>
+		  <td><input type="text" name="dexterityBonus" /></td>
+	      </tr>
+	      <tr>
+		  <td><input type="text" name="constitutionBonus" /></td>
+	      </tr>
+	      <tr>
+		  <td><input type="text" name="intelligenceBonus" /></td>
+	      </tr>
+	      <tr>
+		  <td><input type="text" name="wisdomBonus" /></td>
+	      </tr>
+	      <tr>
+		  <td><input type="text" name="charismaBonus" /></td>
+	      </tr>
+	    </tbody>
+	  </form>
+	  </table>
+	</div>
+      </div>
+      <form action="submitAll" method="post">
+	      <button type="submit">Submit Character</button>
+      </form>
+      <script>
+      function submitAll() {
+	document.getElementById("form-info").submit();
+	document.getElementById("form-rolls").submit();
+      }
+      </script>
+  </body>
+</html>

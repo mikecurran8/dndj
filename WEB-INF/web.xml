@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+    http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    id="WebApp_ID" version="3.0">
+     
+    <display-name>Free DND Character Sheets</display-name>
+     
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>loginServlet</servlet-class>
+    </servlet>
+   
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+	<url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping> 
+
+    <servlet>
+        <servlet-name>createLogin</servlet-name>
+        <servlet-class>createLogin</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>createLogin</servlet-name>
+        <url-pattern>/createLogin</url-pattern>
+    </servlet-mapping>
+
+        <servlet>
+        <servlet-name>characterRolls</servlet-name>
+        <servlet-class>characterRolls</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>characterRolls</servlet-name>
+	<url-pattern>/characterRolls</url-pattern>
+    </servlet-mapping>
+
+        <servlet>
+        <servlet-name>characterInfo</servlet-name>
+        <servlet-class>characterInfo</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>characterInfo</servlet-name>
+        <url-pattern>/characterInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>characterStats</servlet-name>
+        <servlet-class>characterStats</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>characterStats</servlet-name>
+        <url-pattern>/characterStats</url-pattern>
+    </servlet-mapping>
+    
+</web-app>
